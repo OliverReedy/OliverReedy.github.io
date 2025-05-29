@@ -2,3 +2,15 @@ body{
     background-color: #27476e;
     color: white;
 }
+
+.header-name-image{
+    width: 20%;
+    height: auto;
+}
+
+.header-name-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
