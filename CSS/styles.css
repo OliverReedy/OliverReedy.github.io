@@ -1,0 +1,122 @@
+/* ===== Global Styles ===== */
+body {
+    margin: 0; /* Remove default browser margins */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #27476e; /* Deep blue background */
+    color: white; /* Default text color */
+    line-height: 1.6; /* Improves text readability */
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Container styling for nav bar */
+.navbar {
+    background-color: #1e2a38;
+    padding: 1rem 2rem;
+    border-bottom: 4px solid blue;  /* cleaner than full border */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Horizontal list layout */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Push nav to the right */
+    gap: 2rem;                 /* Space between links */
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove link underline and color it */
+.nav-links a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: 500;
+}
+
+/* Add hover styling */
+.nav-links a:hover {
+    color: #00bcd4;
+    transition: color 0.3s ease;
+}
+
+/* ===== Header Section ===== */
+.header-name-container {
+    display: flex;                /* Lay out children side-by-side */
+    justify-content: center;     /* Center content horizontally */
+    align-items: center;         /* Center content vertically */
+    padding: 2rem;               /* Add space around the header */
+    background-color: #1c3555;   /* Slightly darker header background */
+    border-bottom: 2px solid #1e90ff; /* Decorative border */
+}
+
+.header-name-image {
+    width: 20%;     /* Scale image width */
+    height: auto;   /* Maintain aspect ratio */
+    margin-right: 1.5rem; /* Space between image and text */
+}
+
+.header-name-text {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.blueBorder{
+    border: 12px solid blue;
+}
+
+/* ===== Main Content ===== */
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Example section structure (optional starter) */
+section {
+    border: 3px solid #1e90ff; /* border at bottom */
+    margin-bottom   : 3rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* ===== Footer Section ===== */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1c3555;
+    font-size: 0.9rem;
+    border-top: 2px solid #1e90ff; /* border at bottom */
+}
+
+/* ===== Utility Classes (for reuse later) ===== */
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.btn {
+    background-color: #1e90ff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #187bcd;
+}
