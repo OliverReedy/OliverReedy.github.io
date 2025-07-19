@@ -15,7 +15,9 @@
             <div class="logo">Oliver</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#experience">Past Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+
             </ul>
         </nav>
     </header>
@@ -31,40 +33,96 @@
     </header>
 
     <!-- Main content goes here -->
-    <main>
+<main>
 
-        <section id="about">
-            <div class="container">
-                <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                <ul>
-                    <li>Btech Qualified</li>
-                    <li>Software Engineer</li>
-                    <li>GATE AIR 01</li>
-                </ul>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <hr class="section-divider">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+            <ul>
+                <li>BTech Qualified</li>
+                <li>Software Engineer</li>
+                <li>GATE AIR 01</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Past Experience</h2>
+            <hr class="section-divider">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+            <ul>
+                <li>Email: oliver@example.com</li>
+                <li>LinkedIn</li>
+                <li>GitHub</li>
+            </ul>
+        </div>
+
+    </section>
+
+        <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <hr class="section-divider">
+        </div>
+
+        <div class="card-section">
+            <div class="card-container">
+                <div class="card">
+                    <img src="static/images/DroneSide.png" class="header-name-image">
+                    <div class="card-content">
+                        <h3>Card 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+                        <a href="" class = "btn">Read More</a>
+                    </div>
+                </div>   
+            </div>
+            
+            <div class="card-container">
+                <div class="card">
+                    <img src="static/images/DroneSide.png" class="header-name-image">
+                    <div class="card-content">
+                        <h3>Card 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+                        <a href="" class = "btn">Read More</a>
+                    </div>
+                </div>   
             </div>
 
-        </section>
-
-        <section id="about2">
-            <div class="container">
-                <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                <ul>
-                    <li>Btech Qualified</li>
-                    <li>Software Engineer</li>
-                    <li>GATE AIR 01</li>
-                </ul>
+            <div class="card-container">
+                <div class="card">
+                    <img src="static/images/DroneSide.png" class="header-name-image">
+                    <div class="card-content">
+                        <h3>Card 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+                        <a href="" class = "btn">Read More</a>
+                    </div>
+                </div>   
             </div>
-        </section>
+        </div>
+         
+    </section>
 
-    </main>
+</main>
 
     <!-- Footer (optional) -->
     <footer>
         <p>© 2025 Oliver Reedy</p>
     </footer>
 
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) { /* increase number to change when bar disappears*/
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
 </body>
 
 </html>
