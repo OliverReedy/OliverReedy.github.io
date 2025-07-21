@@ -167,11 +167,11 @@ footer {
 
 .card-container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 100px;
-  max-width: 1200px;
+  max-width: 100%
 }
 
 .card {
