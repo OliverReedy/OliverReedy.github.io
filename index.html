@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <title>Oliver's Portfolio</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    
 </head>
 
 <body>
@@ -15,6 +21,7 @@
             <div class="logo">Oliver</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Past Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
 
@@ -25,7 +32,7 @@
     <!-- Header section -->
     <header>
         <div class="header-name-container">
-            <img src="static/images/DroneSide.png" class="header-name-image" alt="Drone logo">
+            <img src="static/images/ProfileShot.JPG" class="header-name-image" alt="Drone logo">
             <div class="header-name-text">
                 Oliver Reedy
             </div>
@@ -37,15 +44,37 @@
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">SUMMARY</h2>
             <hr class="section-divider">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-            <ul>
-                <li>BTech Qualified</li>
-                <li>Software Engineer</li>
-                <li>GATE AIR 01</li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+            <p></p>Mechatronics Engineering graduate from the University of Auckland, with First-Class Honours, 
+            with a diverse background in research and development, system design, and prototyping. 
+            Experienced in both physical (3D printing, rapid fabrication) and software prototyping (C++, Python, MATLAB). 
+            Proven success in developing innovative solutions for autonomous systems, robotics, and automation projects. 
+            Skilled at integrating hardware and software seamlessly. Seeking opportunities in R&D, robotics, automation, 
+            or engineering design to apply my multidisciplinary expertise.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="skills">
+            <h2 class="section-title">SKILLS</h2>
+            <hr class="section-divider">
+
+            <h3 class="section-subtitle">Programming</h3>
+            <p>C, C++, C#, Python, MATLAB, Simulink, Mitsuba, Ansys (CFX)</p>
+
+            <h3 class="section-subtitle">Software</h3>
+            <p>Parametric CAD, SolidWorks, Autodesk Inventor, Blender, LTSpice, DAW (FL Studio), Adobe Suite, Microsoft Suite</p>
+
+            <h3 class="section-subtitle">Fabrication/Hardware</h3>
+            <p>Soldering, 3D Printing, Laser Cutting, PLCs, Embedded Systems, Prototype Development</p>
+
+            <h3 class="section-subtitle">Laboratory</h3>
+            <p>Experimental Design, Data Analysis, Project Reports, Motion Capture and Analysis</p>
+
+            <h3 class="section-subtitle">Documentation</h3>
+            <p>Data Logging, Circuit Schematics, Project Reports, Technical Writing</p>
+
         </div>
     </section>
 
@@ -53,12 +82,35 @@
         <div class="container">
             <h2 class="section-title">Past Experience</h2>
             <hr class="section-divider">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+
+            <h3 class="section-jobtitle">Mechatronics Intern</h3>
+            <h3 class="section-subtitle">Reemoon Australasia Research Center</h3>
             <ul>
-                <li>Email: oliver@example.com</li>
-                <li>LinkedIn</li>
-                <li>GitHub</li>
+                <li>Conducted optical simulations using Mitsuba to optimize light paths for spectrometry in fruit sorting systems,
+                     utilising gradient-based shape optimization of custom modular lenses</li>
+                <li>Designed and built prototype components for a bench spectrometer using 3D printing, water jet cutting, and laser cutting</li>
+                <li>Utilised Open-CV and parallel computation modules to develop a python script capable of developing complex meshes at 0.012 per scanned object</li>
+                <li>Assisted in development of pneumatics powered sorting machine prototype</li>
             </ul>
+
+            <h3 class="section-jobtitle">Mechatronics Intern</h3>
+            <h3 class="section-subtitle">Sealegs Amphibious</h3>
+            <ul>
+                <li>Designed and integrated autonomous navigation for an Unmanned Surface Vehicle (USV) using PixHawk and ArduPilot, 
+                    enhancing stability and waypoint navigation capabilities</li>
+                <li>Established a solar charging system for the USV capable of extending range by 88%</li>
+                <li>Led field-testing and troubleshooting, calibrating sensors, implementing ESC water-cooling, and evaluating performance in varied marine conditions</li>
+                <li>Refined on-board control algorithms, acquiring zero steady-state error accurate vehicle set-point tracking without turning overshoot in
+                     unpredictable dynamic environments</li>
+            </ul>
+
+            <h3 class="section-jobtitle">Mechatronics Intern</h3>
+            <h3 class="section-subtitle">Lux Solar</h3>
+            <ul>
+                <li>Designed a Wi-Fi based remote power management device for solar panels, enabling users to monitor energy usage remotely</li>
+                <li>Incorporated the system with low-cost microcontrollers, ensuring scalability and ease of installation</li>
+            </ul>
+
         </div>
 
     </section>
@@ -71,38 +123,37 @@
 
         <div class="card-section">
             <div class="card-container">
+                
                 <div class="card">
-                    <img src="static/images/DroneSide.png" class="header-name-image">
-                    <div class="card-content">
-                        <h3>Card 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                        <a href="" class = "btn">Read More</a>
-                    </div>
-                </div>   
-            </div>
-            
-            <div class="card-container">
-                <div class="card">
-                    <img src="static/images/DroneSide.png" class="header-name-image">
-                    <div class="card-content">
-                        <h3>Card 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                        <a href="" class = "btn">Read More</a>
-                    </div>
-                </div>   
-            </div>
+                <img src="static/images/DroneImage.png" alt="Drone Project">
+                <div class="card-content">
+                    <h3>Honors Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                </div>
 
-            <div class="card-container">
                 <div class="card">
-                    <img src="static/images/DroneSide.png" class="header-name-image">
-                    <div class="card-content">
-                        <h3>Card 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                        <a href="" class = "btn">Read More</a>
-                    </div>
-                </div>   
+                <img src="static/images/FireFightingRobot.jpg" alt="Firefighting Robot">
+                <div class="card-content">
+                    <h3>Fire Fighting Robot</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                </div>
+
+                <div class="card">
+                <img src="static/images/BiomechHand.png" alt="Biomech Gripper">
+                <div class="card-content">
+                    <h3>Biomechatronic Gripper</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                </div>
+
             </div>
         </div>
+
          
     </section>
 
