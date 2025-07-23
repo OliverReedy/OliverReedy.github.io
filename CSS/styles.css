@@ -6,6 +6,11 @@
   --BackgroundColor: #ffffff;
   --TextColor: #333;
   --AccentColor: #296392;
+
+  --Robotics: #b34141;
+  --Software: #94578c;
+  --Hardware: #296392;
+  --Creative: #33e6d7;
 }
 
 body {
