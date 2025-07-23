@@ -5,9 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Import Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pV...snip..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
 
     <title>Oliver's Portfolio</title>
     <link rel="stylesheet" href="CSS/styles.css">
@@ -29,15 +38,30 @@
         </nav>
     </header>
 
-    <!-- Header section -->
+
     <header>
-        <div class="header-name-container">
-            <img src="static/images/ProfileShot.JPG" class="header-name-image" alt="Drone logo">
-            <div class="header-name-text">
-                Oliver Reedy
-            </div>
+    <div class="header-name-container">
+        <img src="static/images/ProfileShot.JPG" class="header-name-image" alt="Profile photo">
+        
+        <div class="header-name-text">
+        <h1>OLIVER REEDY</h1>
+        
+        <div class="header-icons">
+            <a href="https://github.com/OliverReedy" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/oliver-reedy/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            </a>
+              <a href="#" onclick="copyEmail()" title="Copy Email to Clipboard">
+                <i class="fas fa-envelope"></i> Email
+            </a>
         </div>
+        </div>
+    </div>
     </header>
+
 
     <!-- Main content goes here -->
 <main>
@@ -60,20 +84,20 @@
             <h2 class="section-title">SKILLS</h2>
             <hr class="section-divider">
 
-            <h3 class="section-subtitle">Programming</h3>
-            <p>C, C++, C#, Python, MATLAB, Simulink, Mitsuba, Ansys (CFX)</p>
+            <h3 class="section-subtitle-skills">Programming</h3>
+            <p class = "tight">C, C++, C#, Python, MATLAB, Simulink, Mitsuba, Ansys (CFX)</p>
 
-            <h3 class="section-subtitle">Software</h3>
-            <p>Parametric CAD, SolidWorks, Autodesk Inventor, Blender, LTSpice, DAW (FL Studio), Adobe Suite, Microsoft Suite</p>
+            <h3 class="section-subtitle-skills">Software</h3>
+            <p class = "tight">Parametric CAD, SolidWorks, Autodesk Inventor, Blender, LTSpice, DAW (FL Studio), Adobe Suite, Microsoft Suite</p>
 
-            <h3 class="section-subtitle">Fabrication/Hardware</h3>
-            <p>Soldering, 3D Printing, Laser Cutting, PLCs, Embedded Systems, Prototype Development</p>
+            <h3 class="section-subtitle-skills">Fabrication/Hardware</h3>
+            <p class = "tight">Soldering, 3D Printing, Laser Cutting, PLCs, Embedded Systems, Prototype Development</p>
 
-            <h3 class="section-subtitle">Laboratory</h3>
-            <p>Experimental Design, Data Analysis, Project Reports, Motion Capture and Analysis</p>
+            <h3 class="section-subtitle-skills">Laboratory</h3>
+            <p class = "tight">Experimental Design, Data Analysis, Project Reports, Motion Capture and Analysis</p>
 
-            <h3 class="section-subtitle">Documentation</h3>
-            <p>Data Logging, Circuit Schematics, Project Reports, Technical Writing</p>
+            <h3 class="section-subtitle-skills">Documentation</h3>
+            <p class = "tight">Data Logging, Circuit Schematics, Project Reports, Technical Writing</p>
 
         </div>
     </section>
@@ -84,7 +108,9 @@
             <hr class="section-divider">
 
             <h3 class="section-jobtitle">Mechatronics Intern</h3>
-            <h3 class="section-subtitle">Reemoon Australasia Research Center</h3>
+            <h3 class="section-subtitle">Reemoon Australasia Research Center</h3>   
+            <p class="tight"> <i class="fas fa-calendar-alt"></i> November 2023 - February 2024 </p>
+            <p class="tight"> <i class="fa-solid fa-location-dot"></i>Auckland, New Zealand</p>
             <ul>
                 <li>Conducted optical simulations using Mitsuba to optimize light paths for spectrometry in fruit sorting systems,
                      utilising gradient-based shape optimization of custom modular lenses</li>
@@ -95,6 +121,8 @@
 
             <h3 class="section-jobtitle">Mechatronics Intern</h3>
             <h3 class="section-subtitle">Sealegs Amphibious</h3>
+            <p class="tight"> <i class="fas fa-calendar-alt"></i> November 2021 - March 2022 </p>
+            <p class="tight"> <i class="fa-solid fa-location-dot"></i>Auckland, New Zealand</p>
             <ul>
                 <li>Designed and integrated autonomous navigation for an Unmanned Surface Vehicle (USV) using PixHawk and ArduPilot, 
                     enhancing stability and waypoint navigation capabilities</li>
@@ -106,6 +134,8 @@
 
             <h3 class="section-jobtitle">Mechatronics Intern</h3>
             <h3 class="section-subtitle">Lux Solar</h3>
+            <p class="tight"> <i class="fas fa-calendar-alt"></i> November 2022 - February 2023 </p>
+            <p class="tight"> <i class="fa-solid fa-location-dot"></i>Auckland, New Zealand</p>
             <ul>
                 <li>Designed a Wi-Fi based remote power management device for solar panels, enabling users to monitor energy usage remotely</li>
                 <li>Incorporated the system with low-cost microcontrollers, ensuring scalability and ease of installation</li>
@@ -129,7 +159,7 @@
                 <div class="card-content">
                     <h3>Honors Project</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                    <a href="#" class="btn">Read More</a>
+                    <a href="static/pdfs/HonorsProject.pdf" target="_blank" class="btn">Read More</a>
                 </div>
                 </div>
 
@@ -205,6 +235,17 @@
       navbar.classList.remove("scrolled");
     }
   });
+</script>
+
+<script>
+  function copyEmail() {
+    const email = "oliverreedy0@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      alert("Email copied to clipboard!");
+    }).catch(err => {
+      console.error("Failed to copy email: ", err);
+    });
+  }
 </script>
 </body>
 
