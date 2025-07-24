@@ -1,272 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver's Portfolio</title>
 
-    <!-- Import Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-pV...snip..."
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <title>Oliver's Portfolio</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>
-
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="menu-toggle" id="mobile-menu">
-            ☰
-            </div>
-            <ul class="nav-links">
-            <li><a href="#about">Summary</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Past Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-
-    <header>
-    <div class="header-name-container">
-        <img src="static/images/ProfileShot.JPG" class="header-name-image" alt="Profile photo">
-        
-        <div class="header-name-text">
-        <h1>OLIVER REEDY</h1>
-        
-        <div class="header-icons">
-            <a href="https://github.com/OliverReedy" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/oliver-reedy/" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            </a>
-              <a href="#" onclick="copyEmail()" title="Copy Email to Clipboard">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-        </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Oliver Reedy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">Summary</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Past Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        </ul>
+      </div>
     </div>
-    </header>
+  </nav>
 
+  <!-- Header -->
+  <header class="bg-primary text-white text-center py-5 mt-5">
+    <div class="container">
+      <img src="static/images/ProfileShot.JPG" class="rounded-circle mb-3" style="width: 150px;" alt="Profile">
+      <h1>Oliver Reedy</h1>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="https://github.com/OliverReedy" class="text-white" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/oliver-reedy/" class="text-white" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="#" onclick="copyEmail()" class="text-white"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Main content goes here -->
-<main>
+  <!-- Main Content -->
+  <main class="bg-white text-black py-5">
+    <div class="container">
 
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">SUMMARY</h2>
-            <hr class="section-divider">
-            <p></p>Mechatronics Engineering graduate from the University of Auckland, with First-Class Honours, 
-            with a diverse background in research and development, system design, and prototyping. 
-            Experienced in both physical (3D printing, rapid fabrication) and software prototyping (C++, Python, MATLAB). 
-            Proven success in developing innovative solutions for autonomous systems, robotics, and automation projects. 
-            Skilled at integrating hardware and software seamlessly. Seeking opportunities in R&D, robotics, automation, 
-            or engineering design to apply my multidisciplinary expertise.</p>
-        </div>
-    </section>
-
-    <section id="education">
-        <div class="container">
-            <h2 class="section-title">EDUCATION</h2>
-            <hr class="section-divider">
-
-            <h3 class="section-jobtitle">Bachelor of Engineering (Honours) in Mechatronics Engineering</h3>
-            <h3 class="section-subtitle">University of Auckland</h3>   
-            <p class="tight"> <i class="fas fa-calendar-alt"></i> March 2021 - November 2024 </p>
-            <p class="tight"> <i class="fa-solid fa-location-dot"></i>Auckland, New Zealand</p>
-
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">PAST EXPERIENCE</h2>
-            <hr class="section-divider">
-
-            <h3 class="section-jobtitle">Mechatronics Intern</h3>
-            <h3 class="section-subtitle">Reemoon Australasia Research Center</h3>   
-            <p class="tight"> <i class="fas fa-calendar-alt"></i> November 2023 - February 2024 </p>
-            <p class="tight"> <i class="fa-solid fa-location-dot"></i>Auckland, New Zealand</p>
-            <ul>
-                <li>Conducted optical simulations using Mitsuba to optimize light paths for spectrometry in fruit sorting systems,
-                     utilising gradient-based shape optimization of custom modular lenses</li>
-                <li>Designed and built prototype components for a bench spectrometer using 3D printing, water jet cutting, and laser cutting</li>
-                <li>Utilised Open-CV and parallel computation modules to develop a python script capable of developing complex meshes at 0.012 per scanned object</li>
-                <li>Assisted in development of pneumatics powered sorting machine prototype</li>
-            </ul>
-
-            <h3 class="section-jobtitle">Mechatronics Intern</h3>
-            <h3 class="section-subtitle">Sealegs Amphibious</h3>
-            <p class="tight"> <i class="fas fa-calendar-alt"></i> November 2021 - March 2022 </p>
-            <p class="tight"> <i class="fa-solid fa-location-dot"></i>Auckland, New Zealand</p>
-            <ul>
-                <li>Designed and integrated autonomous navigation for an Unmanned Surface Vehicle (USV) using PixHawk and ArduPilot, 
-                    enhancing stability and waypoint navigation capabilities</li>
-                <li>Established a solar charging system for the USV capable of extending range by 88%</li>
-                <li>Led field-testing and troubleshooting, calibrating sensors, implementing ESC water-cooling, and evaluating performance in varied marine conditions</li>
-                <li>Refined on-board control algorithms, acquiring zero steady-state error accurate vehicle set-point tracking without turning overshoot in
-                     unpredictable dynamic environments</li>
-            </ul>
-
-            <h3 class="section-jobtitle">Mechatronics Intern</h3>
-            <h3 class="section-subtitle">Lux Solar</h3>
-            <p class="tight"> <i class="fas fa-calendar-alt"></i> November 2022 - February 2023 </p>
-            <p class="tight"> <i class="fa-solid fa-location-dot"></i>Auckland, New Zealand</p>
-            <ul>
-                <li>Designed a Wi-Fi based remote power management device for solar panels, enabling users to monitor energy usage remotely</li>
-                <li>Incorporated the system with low-cost microcontrollers, ensuring scalability and ease of installation</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">SKILLS</h2>
-            <hr class="section-divider">
-
-            <h3 class="section-subtitle-skills">Programming</h3>
-            <p class = "tight">C, C++, C#, Python, MATLAB, Simulink, Mitsuba, Ansys (CFX)</p>
-
-            <h3 class="section-subtitle-skills">Software</h3>
-            <p class = "tight">Parametric CAD, SolidWorks, Autodesk Inventor, Blender, LTSpice, DAW (FL Studio), Adobe Suite, Microsoft Suite</p>
-
-            <h3 class="section-subtitle-skills">Fabrication/Hardware</h3>
-            <p class = "tight">Soldering, 3D Printing, Laser Cutting, PLCs, Embedded Systems, Prototype Development</p>
-
-            <h3 class="section-subtitle-skills">Laboratory</h3>
-            <p class = "tight">Experimental Design, Data Analysis, Project Reports, Motion Capture and Analysis</p>
-
-            <h3 class="section-subtitle-skills">Documentation</h3>
-            <p class = "tight">Data Logging, Circuit Schematics, Project Reports, Technical Writing</p>
-
-        </div>
-    </section>
     
+    <section id="about" class="mb-5">
+      <h2>Summary</h2>
+      <hr>
+      <p>Mechatronics Engineering graduate... (summary text)</p>
+    </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">PROJECTS</h2>
-            <hr class="section-divider">
-            <p>
-                #Robotics #Software/Simulation #Personal/Creative #Electronic/Hardware #Data/Sensors #Web/UI
-            </p>
+    <section id="education" class="mb-5">
+      <h2>Education</h2>
+      <hr>
+      <h5>Bachelor of Engineering (Honours) in Mechatronics Engineering</h5>
+      <p><i class="fas fa-calendar-alt"></i> March 2021 - November 2024</p>
+      <p><i class="fas fa-location-dot"></i> Auckland, New Zealand</p>
+    </section>
+
+    <section id="experience" class="my-5">
+        <h2>Work Experience</h2>
+            <hr>
+
+    <div class="accordion" id="jobAccordion">
+        <!-- Job 1 -->
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#job1" aria-expanded="false" aria-controls="job1">
+            Graduate Engineer – Company A
+            </button>
+        </h2>
+        <div id="job1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#jobAccordion">
+            <div class="accordion-body">
+            <p><strong>Duration:</strong> Jan 2023 – Dec 2023</p>
+            <p>Worked on sensor integration, prototyping, and data analysis for food sorting machinery.</p>
+            </div>
+        </div>
         </div>
 
-        <div class="card-section">
-            <div class="card-container">
-                
-                <div class="card" style="--card-color: var(--Robotics);">   
-                <img src="static/images/DroneProfileShot.png" alt="Drone Project">
-                <div class="card-content">
-                    <h3>Honors Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                    <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn">Read More</a>
-                </div>
-                </div>
-
-                <div class="card" style="--card-color: var(--Robotics);">
-                <img src="static/images/FireFightingRobot.jpg" alt="Firefighting Robot">
-                <div class="card-content">
-                    <h3>Fire Fighting Robot</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                    <a href="static/pdfs/FirefightingRobot.pdf" target="_blank" class="btn">Read More</a>
-                </div>
-                </div>
-
-                <div class="card" style="--card-color: var(--Hardware);">
-                <img src="static/images/BiomechHand.png" alt="Biomechatronic Gripper">
-                <div class="card-content">
-                    <h3>Biomechatronic Gripper</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                    <a href="static/pdfs/BiomechatronicGripper.pdf" target="_blank" class="btn">Read More</a>
-                </div>
-                </div>
-
-                <div class="card" style="--card-color: var(--Robotics);">
-                <img src="static/images/USVProject.jpg" alt="USV Sealegs Project">
-                <div class="card-content">
-                    <h3>USV Sealegs Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                    <a href="static/pdfs/USVProjectReport.pdf" target="_blank" class="btn">Read More</a>
-                </div>
-                </div>
-
-                <div class="card" style="--card-color: var(--Hardware);">
-                <img src="static/images/EncoderProject.png" alt="Encoder Project">
-                <div class="card-content">
-                    <h3>Encoder Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                    <a href="static/pdfs/EncoderProjectReport.pdf" target="_blank" class="btn">Read More</a>
-                </div>
-                </div>
-
-                <div class="card" style="--card-color: var(--Hardware);">
-                <img src="static/images/XYPlaner.jpg" alt="XY Planer">
-                <div class="card-content">
-                    <h3>XY Planer</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
-                    <a href="static/pdfs/XYPlanerReport.pdf" target="_blank" class="btn">Read More</a>
-                </div>
-                </div>
+        <!-- Job 2 -->
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#job2" aria-expanded="false" aria-controls="job2">
+            Internship – Company B
+            </button>
+        </h2>
+        <div id="job2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#jobAccordion">
+            <div class="accordion-body">
+            <p><strong>Duration:</strong> Nov 2022 – Feb 2023</p>
+            <p>Assisted in robotics R&D, developed simulation tools in Python and C++, and tested embedded systems.</p>
             </div>
-        </div>     
+        </div>
+        </div>
+
+        <!-- Add more jobs below as needed -->
+    </div>
     </section>
-</main>
 
-    <!-- Footer (optional) -->
-    <footer>
-        <p>© 2025 Oliver Reedy</p>
-    </footer>
 
-<script>
-  window.addEventListener("scroll", function() {
-    const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 50) { /* increase number to change when bar disappears*/
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
+    <section id="skills" class="mb-5">
+      <h2>Skills</h2>
+      <hr>
+      <h6>Programming</h6>
+      <p>C, C++, Python, MATLAB, ...</p>
+      <h6>Software</h6>
+      <p>CAD, SolidWorks, Inventor, ...</p>
+      <!-- Other skill categories -->
+    </section>
+
+    <section id="projects" class="mb-5">
+      <h2>Projects</h2>
+      <hr>
+      <div class="row">
+        <!-- Project card example -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="static/images/DroneProfileShot.png" class="card-img-top" alt="Drone">
+            <div class="card-body">
+              <h5 class="card-title">Honors Project</h5>
+              <p class="card-text">Brief description here.</p>
+              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other projects -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="static/images/BiomechHand.png" class="card-img-top" alt="BiomechHand">
+            <div class="card-body">
+              <h5 class="card-title">Biomechatronic Hand</h5>
+              <p class="card-text">Brief description here.</p>
+              <a href="static/pdfs/BiomechatronicGripper.pdf" target="_blank" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="static/images/DroneProfileShot.png" class="card-img-top" alt="Drone">
+            <div class="card-body">
+              <h5 class="card-title">Honors Project</h5>
+              <p class="card-text">Brief description here.</p>
+              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="static/images/DroneProfileShot.png" class="card-img-top" alt="Drone">
+            <div class="card-body">
+              <h5 class="card-title">Honors Project</h5>
+              <p class="card-text">Brief description here.</p>
+              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+    </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Oliver Reedy</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function copyEmail() {
+      navigator.clipboard.writeText("oliverreedy0@gmail.com").then(() => {
+        alert("Email copied to clipboard!");
+      });
     }
-  });
-</script>
-
-<script>
-  function copyEmail() {
-    const email = "oliverreedy0@gmail.com";
-    navigator.clipboard.writeText(email).then(() => {
-      alert("Email copied to clipboard!");
-    }).catch(err => {
-      console.error("Failed to copy email: ", err);
-    });
-  }
-</script>
-
-<script>
-  const menuToggle = document.getElementById('mobile-menu');
-  const navLinks = document.querySelector('.nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
-
+  </script>
 </body>
 
 </html>
