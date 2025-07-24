@@ -36,13 +36,19 @@ body {
     background-color: var(--PrimaryColor); /* starting color */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
-    padding: 1rem 2rem;
+    padding: 0.5rem 0rem;
     /*border-bottom: 4px solid blue;  /* cleaner than full border */
     
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 
 
 /* When scrolled down */
@@ -52,21 +58,14 @@ body {
     border-bottom: none;
 }
 
-.logo {
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-}
-
 /* Horizontal list layout */
 .nav-links {
     list-style: none;
     display: flex;
     
     gap: 2rem;                 /* Space between links */
-    margin: 0rem;
+    margin: 0.5rem;
     padding: 0rem;
-    margin-right: 5rem;
 }
 
 /* Remove link underline and color it */
@@ -81,6 +80,39 @@ body {
     color: var(--SecondaryColor );
     transition: color 0.3s ease;
 }
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: var(--PrimaryColor);
+    width: 100%;
+    text-align: right;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}
+
 
 /* ===== Header Section ===== */
 .header-name-container {
@@ -139,11 +171,11 @@ main {
     padding: 0rem;
 }
 
-/* Each section block */
+/* Each section block */  
 section {
 
     border: none;
-    padding: 1rem 15rem;
+    padding: 1% 10%;
     margin-bottom: 3rem;
     background-color: var(--BackgroundColor) /* subtle contrast */
 }

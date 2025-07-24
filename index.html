@@ -25,18 +25,22 @@
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">Oliver</div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="menu-toggle" id="mobile-menu">
+            ☰
+            </div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Past Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-
+            <li><a href="#about">Summary</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Past Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
+
+
 
 
     <header>
@@ -79,49 +83,15 @@
         </div>
     </section>
 
-    <section id="skills">
-        <div class="skills">
-            <h2 class="section-title">SKILLS</h2>
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">EDUCATION</h2>
             <hr class="section-divider">
 
-            <h3 class="section-subtitle-skills">Programming</h3>
-            <p class = "tight">C, C++, C#, Python, MATLAB, Simulink, Mitsuba, Ansys (CFX)</p>
-
-            <h3 class="section-subtitle-skills">Software</h3>
-            <p class = "tight">Parametric CAD, SolidWorks, Autodesk Inventor, Blender, LTSpice, DAW (FL Studio), Adobe Suite, Microsoft Suite</p>
-
-            <h3 class="section-subtitle-skills">Fabrication/Hardware</h3>
-            <p class = "tight">Soldering, 3D Printing, Laser Cutting, PLCs, Embedded Systems, Prototype Development</p>
-
-            <h3 class="section-subtitle-skills">Laboratory</h3>
-            <p class = "tight">Experimental Design, Data Analysis, Project Reports, Motion Capture and Analysis</p>
-
-            <h3 class="section-subtitle-skills">Documentation</h3>
-            <p class = "tight">Data Logging, Circuit Schematics, Project Reports, Technical Writing</p>
-
-        </div>
-
-    </section>
-
-        <section id="skills">
-        <div class="skills">
-            <h2 class="section-title">SKILLS</h2>
-            <hr class="section-divider">
-
-            <h3 class="section-subtitle-skills">Programming</h3>
-            <p class = "tight">C, C++, C#, Python, MATLAB, Simulink, Mitsuba, Ansys (CFX)</p>
-
-            <h3 class="section-subtitle-skills">Software</h3>
-            <p class = "tight">Parametric CAD, SolidWorks, Autodesk Inventor, Blender, LTSpice, DAW (FL Studio), Adobe Suite, Microsoft Suite</p>
-
-            <h3 class="section-subtitle-skills">Fabrication/Hardware</h3>
-            <p class = "tight">Soldering, 3D Printing, Laser Cutting, PLCs, Embedded Systems, Prototype Development</p>
-
-            <h3 class="section-subtitle-skills">Laboratory</h3>
-            <p class = "tight">Experimental Design, Data Analysis, Project Reports, Motion Capture and Analysis</p>
-
-            <h3 class="section-subtitle-skills">Documentation</h3>
-            <p class = "tight">Data Logging, Circuit Schematics, Project Reports, Technical Writing</p>
+            <h3 class="section-jobtitle">Bachelor of Engineering (Honours) in Mechatronics Engineering</h3>
+            <h3 class="section-subtitle">University of Auckland</h3>   
+            <p class="tight"> <i class="fas fa-calendar-alt"></i> March 2021 - November 2024 </p>
+            <p class="tight"> <i class="fa-solid fa-location-dot"></i>Auckland, New Zealand</p>
 
         </div>
     </section>
@@ -164,12 +134,34 @@
                 <li>Designed a Wi-Fi based remote power management device for solar panels, enabling users to monitor energy usage remotely</li>
                 <li>Incorporated the system with low-cost microcontrollers, ensuring scalability and ease of installation</li>
             </ul>
-
         </div>
-
     </section>
 
-        <section id="projects">
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">SKILLS</h2>
+            <hr class="section-divider">
+
+            <h3 class="section-subtitle-skills">Programming</h3>
+            <p class = "tight">C, C++, C#, Python, MATLAB, Simulink, Mitsuba, Ansys (CFX)</p>
+
+            <h3 class="section-subtitle-skills">Software</h3>
+            <p class = "tight">Parametric CAD, SolidWorks, Autodesk Inventor, Blender, LTSpice, DAW (FL Studio), Adobe Suite, Microsoft Suite</p>
+
+            <h3 class="section-subtitle-skills">Fabrication/Hardware</h3>
+            <p class = "tight">Soldering, 3D Printing, Laser Cutting, PLCs, Embedded Systems, Prototype Development</p>
+
+            <h3 class="section-subtitle-skills">Laboratory</h3>
+            <p class = "tight">Experimental Design, Data Analysis, Project Reports, Motion Capture and Analysis</p>
+
+            <h3 class="section-subtitle-skills">Documentation</h3>
+            <p class = "tight">Data Logging, Circuit Schematics, Project Reports, Technical Writing</p>
+
+        </div>
+    </section>
+    
+
+    <section id="projects">
         <div class="container">
             <h2 class="section-title">PROJECTS</h2>
             <hr class="section-divider">
@@ -265,6 +257,16 @@
     });
   }
 </script>
+
+<script>
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
 </body>
 
 </html>
