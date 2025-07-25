@@ -17,3 +17,17 @@ html {
   scroll-padding-top: 60px; /* height of your fixed navbar */
   scroll-behavior: smooth;  /* optional for smooth scrolling */
 }
+
+.section{
+  background-color: #296392;
+}
+
+.section-title{
+  background-color: #aa433f;
+}
+
+.section-writing{
+  background-color: #3f8ccc;
+}
+
+
