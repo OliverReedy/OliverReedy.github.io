@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  $grays: (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  );
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oliver's Portfolio</title>
@@ -19,7 +30,7 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Oliver Reedy</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -68,23 +79,45 @@
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
+
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 300px;">
-              <div class="text-center px-5">
+            <div style="position: relative; height: 300px;">
+
+              <!-- Blurred background -->
+              <div style="
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background-image: url('static/images/Reemoon.jpg');
+                background-size: cover;
+                background-position: center;
+                filter: blur(6px);
+                z-index: 0;
+              "></div>
+
+              <!-- Text content on top -->
+              <div class="d-flex align-items-center justify-content-center text-white"
+                style="position: relative; height: 300px; z-index: 1;">
+              <div class="text-center px-5 bg-transparent p-3 rounded">
                 <h5>Reemoon Australasia</h5>
-                <p>This is some placeholder content for the first slide. It is centered and styled without an image.</p>
+                <p>This is some placeholder content for the first slide with a blurred background image.</p>
               </div>
             </div>
           </div>
+        </div>
+
+
+
           <div class="carousel-item">
-            <div class="d-flex align-items-center justify-content-center bg-secondary" style="height: 300px;">
+            <div class="d-flex align-items-center justify-content-center bg-primary" style="height: 300px;">
               <div class="text-center px-5">
                 <h5>Sealegs</h5>
                 <p>This is some more content for the second slide, also just text-based.</p>
               </div>
             </div>
           </div>
+
+          
           <div class="carousel-item">
             <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 300px;">
               <div class="text-center px-5">
@@ -179,17 +212,26 @@
             <div class="card-body">
               <h5 class="card-title">Honors Project</h5>
               <p class="card-text">Brief description here.</p>
-              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-outline-primary">Read More</a>
+              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-light mb-0">Read More</a>
+            </div>
+                        <!-- Icon container -->
+            <div class="position-absolute" style="bottom: 15px; right: 10px; color: white;">
+              <i class="fas fa-robot fa-2x"></i>
             </div>
           </div>
         </div>
+
         <div class="col-md-4 mb-4 ">
           <div class="card h-100 bg-primary bg-gradient">
             <img src="static/images/BiomechHand.png" class="card-img-top" alt="BiomechHand">
             <div class="card-body">
               <h5 class="card-title">Biomechatronic Hand</h5>
               <p class="card-text">Brief description here.</p>
-              <a href="static/pdfs/BiomechatronicGripper.pdf" target="_blank" class="btn btn-outline-primary">Read More</a>
+              <a href="static/pdfs/BiomechatronicGripper.pdf" target="_blank" class="btn btn-light">Read More</a>
+            </div>
+              <!-- Icon container -->
+            <div class="position-absolute" style="bottom: 15px; right: 10px; color: white;">
+              <i class="fas fa-robot fa-2x"></i>
             </div>
           </div>
         </div>
@@ -200,21 +242,49 @@
             <div class="card-body">
               <h5 class="card-title">Honors Project</h5>
               <p class="card-text">Brief description here.</p>
-              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-outline-primary">Read More</a>
+              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-light">Read More</a>
+            </div>
+            <!-- Icon container -->
+            <div class="position-absolute" style="bottom: 15px; right: 10px; color: white;">
+              <i class="fas fa-robot fa-2x"></i>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 ">
-          <div class="card h-100 bg-warning bg-gradient">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 bg-warning bg-gradient position-relative">
             <img src="static/images/EncoderProject.png" class="card-img-top" alt="Drone">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">Honors Project</h5>
               <p class="card-text">Brief description here.</p>
-              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-outline-primary">Read More</a>
+              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-light mt-auto align-self-start">Read More</a>
+            </div>
+            <!-- Icon container -->
+            <div class="position-absolute" style="bottom: 15px; right: 10px; color: white;">
+              <i class="fas fa-microchip fa-2x"></i>
             </div>
           </div>
         </div>
+
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 bg-primary bg-gradient">
+            <canvas class="card-img-top" id="ant-preview" width="300" height="300"></canvas>
+            <!-- <img src="static/images/LangdonAnt.png" class="card-img-top" alt="Drone"> -->
+            <div class="card-body">
+              <h5 class="card-title">Cellular Automation</h5>
+              <p class="card-text">A simple cellular automaton with complex emergent behavior.</p>
+              <a href="langtons-ant.html" target="_blank" class="btn btn-light">Open Window</a>
+            </div>
+            <!-- Icon container -->
+            <div class="position-absolute" style="bottom: 15px; right: 10px; color: white;">
+              <i class="fas fa-code fa-2x"></i>
+            </div>
+          </div>
+        </div>
+
+
+
     </section>
     </div>
   </main>
@@ -228,13 +298,9 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script>
-    function copyEmail() {
-      navigator.clipboard.writeText("oliverreedy0@gmail.com").then(() => {
-        alert("Email copied to clipboard!");
-      });
-    }
-  </script>
+
+  <script src="cellAutoCardDisplay.js"></script>
+  <script src="functionScripts.js"></script>
 </body>
 
 </html>
