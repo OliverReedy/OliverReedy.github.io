@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 const canvas = document.getElementById("ant-preview");
 const ctx = canvas.getContext("2d");
-const size = 5;
+const size = 10;
 const cellSize = canvas.width / size;
 
 let grid = Array.from({ length: size }, () => Array(size).fill(0));
@@ -32,5 +32,5 @@ function step() {
 ctx.fillStyle = "#333";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-setInterval(step, 200);
+setInterval(step, 50);
 });

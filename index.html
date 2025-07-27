@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  $grays: (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-  );
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oliver's Portfolio</title>
@@ -25,12 +14,16 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient  fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Oliver Reedy</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -38,7 +31,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-
+          <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Past Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -48,63 +41,82 @@
   </nav>
 
   <!-- Header -->
-  <header class= "bg-secondary bg-gradient text-dark text-center py-5">
-    <div class="container">
-      <img src="static/images/ProfileShot.JPG" class="rounded-circle mb-3" style="width: 150px;" alt="Profile">
-      <h1>Oliver Reedy</h1>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="https://github.com/OliverReedy" class="text-white" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/oliver-reedy/" class="text-white" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="#" onclick="copyEmail()" class="text-white"><i class="fas fa-envelope"></i> Email</a>
+<header class="py-5 bg-dark" id="profile">
+  <div class="container mt-5 position-relative" style="z-index: 1;">
+
+    <div class="row">
+      <div class="col-md text-center">
+        <img src="static/images/ProfileShot.JPG" class="rounded-circle img-fluid mx-auto d-block border border-white border-2" style="max-width: 325px; width: 100%; height: auto;" alt="Profile">
+      </div>
+
+<div class="col-md d-flex flex-column justify-content-center align-items-center text-center text-white" style="min-height: 100%;">
+  <h1 class="mt-3">Oliver Reedy</h1>
+  <h3 class="mb-2 purple">Mechatronics Graduate</h3>
+  <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center">
+    <a href="https://github.com/OliverReedy" target="_blank" class="btn btn-outline-light rounded-pill">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/oliver-reedy/" target="_blank" class="btn btn-outline-light rounded-pill">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="#" onclick="copyEmail()" class="btn btn-outline-light rounded-pill">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+  </div>
+</div>
+
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- Main Content -->
   <main class="bg-dark text-white py-5">
 
-   <div class="container mb-5" id="experience">
-        <div class="row">
-          <div class="col-lg-3 col-12">
-            <h2>Work Experience</h2>
-          </div>
+    <section class="container my-5 py-5" id="experience">
+      <div class="row">
+        <div class="col-lg-3 col-12">
+          <h2>Work Experience </h2>
         </div>
-        <div class="row">
-          <div class="col">
-            <hr>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="solid-line"></div>
+        </div>
+      </div>
       <div id="carouselExampleCaptions" class="carousel slide text-white" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="d-flex align-items-center justify-content-center bg-success bg-gradient" style="height: 300px;">
-              <div class="text-center px-5">
-                <h5>Reemoon Australasia</h5>
-                <p>This is some placeholder content for the first slide. It is centered and styled without an image.</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="d-flex align-items-center justify-content-center bg-primary bg-gradient" style="height: 300px;">
-              <div class="text-center px-5">
-                <h5>Sealegs</h5>
-                <p>This is some more content for the second slide, also just text-based.</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="d-flex align-items-center justify-content-center bg-warning bg-gradient" style="height: 300px;">
-              <div class="text-center px-5">
-                <h5>Lux Solar</h5>
-                <p>And here is the third slide. Still no image. Still awesome.</p>
-              </div>
+      
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex align-items-center justify-content-center reemoon bg-gradient rounded-card border-white" style="height: 300px; border: 2px solid white; border-radius: 1rem;">
+            <div class="text-start px-5 mx-auto" style="max-width: 1000px;">
+              <h5>Reemoon Australasia</h5>
+              <p>Optimized optical systems and built prototypes for next-gen fruit sorting tech. Worked on spectrometry, lens design, and object recognition using Python, OpenCV, and hands-on fabrication.</p>
             </div>
           </div>
         </div>
+        <div class="carousel-item">
+          <div class="d-flex align-items-center justify-content-center sealegs bg-gradient  rounded-card" style="height: 300px; border: 2px solid white; border-radius: 1rem;">
+            <div class="text-start px-5 mx-auto" style="max-width: 1000px;">
+              <h5>Sealegs</h5>
+              <p>Developed autonomous navigation and solar power systems for a marine drone. Led testing and refinement of control algorithms, achieving smooth, accurate tracking on the water. Integrated sensor calibration, solar charging, and cooling systems for robust field performance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+              <div class="d-flex align-items-center justify-content-center lux bg-gradient  rounded-card" style="height: 300px; border: 2px solid white; border-radius: 1rem;">
+                <div class="text-start px-5 mx-auto" style="max-width: 1000px;">
+                  <h5>Lux Solar</h5>
+                  <p>Built a Wi-Fi-enabled power monitor for solar panel systems. Designed for remote energy tracking using low-cost micro-controllers, with a focus on scalability and easy deployment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
@@ -114,16 +126,17 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </div>
+
+    </section>
       
 
 
-    <div class="container mt-5 mb-5" id="skills">
+    <section class="container my-5 py-5" id="skills">
       <!-- Title section -->
       <div class="row mb-4">
         <div class="col">
           <h2>Skills</h2>
-          <hr>
+          <div class="solid-line"></div>
         </div>
       </div>
 
@@ -131,7 +144,7 @@
       <div class="row" >
         <!-- Left text column -->
         <div class="col-lg-4 mb-4">
-          <p>Overview or intro text about your skillset. You can explain what these cards represent or give a summary of your experience.</p>
+          <p>With a foundation in Mechatronics Engineering, I bring a multidisciplinary skill set that bridges hardware and software. I thrive in hands-on environments that demand both technical breadth and attention to detail.</p>
         </div>
 
         <!-- Right card column -->
@@ -139,134 +152,123 @@
           <div class="row row-cols-1 row-cols-md-2 g-4">
             <!-- Card 1 -->
             <div class="col">
-              <div class="card h-100 text-center">
-                <div class="card-body d-flex flex-column align-items-center justify-content-center bg-primary bg-gradient" style="height: 100%;">
+              <div class="card h-100 text-center bg-primary bg-gradient rounded-card border-white border-2">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center " style="height: 100%;">
                   <i class="fas fa-code fa-4x mb-3"></i>
                   <h5 class="card-title">Programming</h5>
-                  <p class="card-text">Experience with C++, Python, and embedded systems.</p>
+                  <p class="card-text">Adept with C/C++, C#, Python and more</p>
                 </div>
               </div>
             </div>
             <!-- Card 2 -->
             <div class="col">
-              <div class="card h-100 text-center">
-                <div class="card-body d-flex flex-column align-items-center justify-content-center bg-success bg-gradient" style="height: 100%;">
+              <div class="card h-100 text-center bg-success bg-gradient  rounded-card border-white border-2">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center" style="height: 100%;">
                   <i class="fas fa-microchip fa-4x mb-3"></i>
                   <h5 class="card-title">Electronics</h5>
-                  <p class="card-text">Circuit design, PCB layout, and soldering skills.</p>
+                  <p class="card-text">Circuit design, PCB layout, soldering skills and embedded systems.</p>
                 </div>
               </div>
             </div>
             <!-- Card 3 -->
             <div class="col">
-              <div class="card h-100 text-center">
-                <div class="card-body d-flex flex-column align-items-center justify-content-center bg-danger bg-gradient" style="height: 100%;">
+              <div class="card h-100 text-center bg-danger bg-gradient  rounded-card border-white border-2">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center" style="height: 100%;">
                   <i class="fas fa-robot fa-4x mb-3"></i>
                   <h5 class="card-title">Robotics</h5>
-                  <p class="card-text">Mechanical design, control systems, and integration.</p>
+                  <p class="card-text">Mechanical design, control systems, and the integration of multiple disciplines.</p>
                 </div>
               </div>
             </div>
             <!-- Card 4 -->
             <div class="col">
-              <div class="card h-100 text-center">
-                <div class="card-body d-flex flex-column align-items-center justify-content-center bg-warning bg-gradient" style="height: 100%;">
-                  <i class="fas fa-paint-brush fa-4x mb-3"></i>
+              <div class="card h-100 text-center bg-warning bg-gradient rounded-card border-white border-2">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center" style="height: 100%;">
+                  <i class="fas fa-compass-drafting fa-4x mb-3"></i>
                   <h5 class="card-title">Design</h5>
-                  <p class="card-text">CAD, 3D modeling, and UX prototyping.</p>
+                  <p class="card-text">CAD, 3D modeling, and general prototyping/fabrication.</p>
                 </div>
               </div>
             </div>
           </div> <!-- /row-cols -->
         </div> <!-- /col-lg-8 -->
       </div> <!-- /row -->
-    </div> <!-- /container -->
+    </section> <!-- /container -->
 
-    <section id="projects" class="mb-5">
+    <section id="projects" class="container my-5 py-5">
       <h2>Projects</h2>
-      <hr>
+      <div class="solid-line"></div>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <div class="card h-100 bg-danger bg-gradient">
-            <img src="static/images/DroneProfileShot.png" class="card-img-top" alt="Drone">
+          <div class="card h-100 bg-danger bg-gradient border-white border-2">
+            <img src="static/images/DroneProfileShot.png" class="card-img-top " alt="Drone">
             <div class="card-body">
               <h5 class="card-title">Honors Project</h5>
-              <p class="card-text">Brief description here.</p>
+              <p class="card-text">Designing, manufacturing, and physical testing of a variable arm modification for a multi-rotor UAV.</p>
               <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-light mb-0">Read More</a>
             </div>
-                        <!-- Icon container -->
-            <div class="position-absolute" style="bottom: 15px; right: 10px; color: white;">
-              <i class="fas fa-robot fa-2x"></i>
-            </div>
+                       
           </div>
         </div>
 
         <div class="col-md-4 mb-4 ">
-          <div class="card h-100 bg-primary bg-gradient">
+          <div class="card h-100 bg-warning bg-gradient border-white border-2">
             <img src="static/images/BiomechHand.png" class="card-img-top" alt="BiomechHand">
             <div class="card-body">
               <h5 class="card-title">Biomechatronic Hand</h5>
-              <p class="card-text">Brief description here.</p>
+              <p class="card-text">Design and build of a biologically inspired gripper system with singular motor input.</p>
               <a href="static/pdfs/BiomechatronicGripper.pdf" target="_blank" class="btn btn-light">Read More</a>
-            </div>
-              <!-- Icon container -->
-            <div class="position-absolute" style="bottom: 15px; right: 10px; color: white;">
-              <i class="fas fa-robot fa-2x"></i>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 mb-4 ">
-          <div class="card h-100 bg-success bg-gradient">
+          <div class="card h-100 bg-danger bg-gradient border-white border-2">
             <img src="static/images/FireFightingRobot.jpg" class="card-img-top" alt="Drone">
             <div class="card-body">
-              <h5 class="card-title">Honors Project</h5>
-              <p class="card-text">Brief description here.</p>
-              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-light">Read More</a>
-            </div>
-            <!-- Icon container -->
-            <div class="position-absolute" style="bottom: 15px; right: 10px; color: white;">
-              <i class="fas fa-robot fa-2x"></i>
+              <h5 class="card-title">Firefighting Robot</h5>
+              <p class="card-text">State System behaviour control based implementation of fire fighting robot prototype.</p>
+              <a href="static/pdfs/FirefightingRobot.pdf" target="_blank" class="btn btn-light">Read More</a>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 mb-4">
-          <div class="card h-100 bg-warning bg-gradient position-relative">
+          <div class="card h-100 bg-success bg-gradient border-white border-2">
             <img src="static/images/EncoderProject.png" class="card-img-top" alt="Drone">
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Honors Project</h5>
-              <p class="card-text">Brief description here.</p>
-              <a href="static/pdfs/HonorsProject-compressed.pdf" target="_blank" class="btn btn-light mt-auto align-self-start">Read More</a>
+              <h5 class="card-title">Encoder Project</h5>
+              <p class="card-text">Building of a motor encoder system.</p>
+              <a href="static/pdfs/EncoderProjectReport.pdf" target="_blank" class="btn btn-light mt-auto align-self-start">Read More</a>
             </div>
-            <!-- Icon container -->
-            <div class="position-absolute" style="bottom: 15px; right: 10px; color: white;">
-              <i class="fas fa-microchip fa-2x"></i>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 bg-success bg-gradient border-white border-2">
+            <img src="static/images/XYPlaner.jpg" class="card-img-top" alt="Drone">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">XY Planer</h5>
+              <p class="card-text">Design and programming of a planer worktable capable of accurate sketching/motion control.</p>
+              <a href="static/pdfs/XYPlanerReport.pdf" target="_blank" class="btn btn-light mt-auto align-self-start">Read More</a>
             </div>
           </div>
         </div>
 
 
         <div class="col-md-4 mb-4">
-          <div class="card h-100 bg-primary bg-gradient">
+          <div class="card h-100 bg-primary bg-gradient border-white border-2">
             <canvas class="card-img-top" id="ant-preview" width="300" height="300"></canvas>
             <!-- <img src="static/images/LangdonAnt.png" class="card-img-top" alt="Drone"> -->
             <div class="card-body">
               <h5 class="card-title">Cellular Automation</h5>
-              <p class="card-text">A simple cellular automaton with complex emergent behavior.</p>
-              <a href="langtons-ant.html" target="_blank" class="btn btn-light">Open Window</a>
-            </div>
-            <!-- Icon container -->
-            <div class="position-absolute" style="bottom: 15px; right: 10px; color: white;">
-              <i class="fas fa-code fa-2x"></i>
+              <p class="card-text">Simple cellular automaton.</p>
+              <a href="langtons-ant.html" target="_blank" class="btn btn-light">Read more</a>
             </div>
           </div>
         </div>
 
-
-
     </section>
-    </div>
   </main>
 
   <!-- Footer -->
@@ -281,6 +283,17 @@
 
   <script src="cellAutoCardDisplay.js"></script>
   <script src="functionScripts.js"></script>
+
+<script> 
+    window.addEventListener("scroll", function() {
+      const navbar = document.querySelector(".navbar");
+      if (window.scrollY > 50) { /* increase number to change when bar disappears*/
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
 </body>
 
 </html>
