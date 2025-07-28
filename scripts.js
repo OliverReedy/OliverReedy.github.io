@@ -1,3 +1,19 @@
+function copyEmail() {
+    navigator.clipboard.writeText("oliverreedy0@gmail.com").then(() => {
+    alert("Email copied to clipboard!");
+    });
+}
+
+
+window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) { /* increase number to change when bar disappears*/
+    navbar.classList.add("scrolled");
+    } else {
+    navbar.classList.remove("scrolled");
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
 const canvas = document.getElementById("ant-preview");
 const ctx = canvas.getContext("2d");

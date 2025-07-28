@@ -143,3 +143,13 @@ body::after {
     display: none;
   }
 }
+
+.btn-light {
+    color: #000000;
+    background-color: #ffffff;
+}
+.btn-light:hover, .btn-light:focus, .btn-light:active, .btn-light.active, .open>.dropdown-toggle.btn-light {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #ffffff; /*set the color you want here*/
+} 
